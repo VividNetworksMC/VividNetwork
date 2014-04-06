@@ -23,6 +23,7 @@ public class VividNetwork extends JavaPlugin{
 			getServer().getPluginManager().registerEvents(new VanishTorchListener(this), this);
 			getServer().getPluginManager().registerEvents(new AntiMoveListener(this), this);
 			getServer().getPluginManager().registerEvents(new Grappler(this), this);
+			getCommand("Warn").setExecutor(new WarnCommand(this));
 			PluginDescriptionFile pdfFile = this.getDescription();
 			System.out.println("[VividNetwork] " + pdfFile.getVersion() + " is Enabled!");
 			List<String> authors = pdfFile.getAuthors();

@@ -3,6 +3,9 @@ main: net.vividnetwork.VividNetwork
 version: 3.0
 authors: [BOBNOTBUILDING, SkylerTyler, xAstraah]
 
+commands:
+  Warn:
+
 permission:
   hub.reload: op
   hub.bypass: op
