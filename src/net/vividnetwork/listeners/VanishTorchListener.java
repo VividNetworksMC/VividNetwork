@@ -77,7 +77,7 @@ public class VanishTorchListener implements Listener{
             if(action == Action.RIGHT_CLICK_AIR || action == Action.RIGHT_CLICK_BLOCK){
     		 if(is.getType().equals(Material.SLIME_BALL) && is.hasItemMeta()){
               	 for(Player others : this.plugin.getServer().getOnlinePlayers()){
-    	    	     player.hidePlayer(others);
+    	    	     player.showPlayer(others);
                      player.playSound(player.getLocation(), Sound.ANVIL_BREAK, 10, 1);
                      player.setItemInHand(new ItemStack(getCustName(Items.magmacream)));
                      player.sendMessage(ChatColor.GRAY + "Players Toggled: "+ChatColor.GREEN.toString()+ChatColor.BOLD+"Enabled");
