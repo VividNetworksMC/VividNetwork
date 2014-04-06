@@ -71,17 +71,19 @@ public class VanishTorchListener implements Listener{
     			 player.hidePlayer(others);
                  player.playSound(player.getLocation(), Sound.ANVIL_LAND, 10, 1);
                  player.setItemInHand(new ItemStack(getCustName(Items.slimeball)));
-                 player.sendMessage(ChatColor.GRAY + "Players ✈ "+ChatColor.RED.toString()+ChatColor.BOLD+"Disabled");
+                 player.sendMessage(ChatColor.GRAY + "Players Toggled: "+ChatColor.RED.toString()+ChatColor.BOLD+"Disabled");
     			 }
     		  }
+            if(action == Action.RIGHT_CLICK_AIR || action == Action.RIGHT_CLICK_BLOCK){
     		 if(is.getType().equals(Material.SLIME_BALL) && is.hasItemMeta()){
               	 for(Player others : this.plugin.getServer().getOnlinePlayers()){
     	    	     player.hidePlayer(others);
                      player.playSound(player.getLocation(), Sound.ANVIL_BREAK, 10, 1);
                      player.setItemInHand(new ItemStack(getCustName(Items.magmacream)));
-                     player.sendMessage(ChatColor.GRAY + "Players ✈ "+ChatColor.GREEN.toString()+ChatColor.BOLD+"Enabled");
+                     player.sendMessage(ChatColor.GRAY + "Players Toggled: "+ChatColor.GREEN.toString()+ChatColor.BOLD+"Enabled");
     			 }
     		  }
+              }
     	    }
     	 }
      }
