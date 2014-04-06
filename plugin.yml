@@ -1,6 +1,6 @@
 name: VividNetwork
 main: net.vividnetwork.VividNetwork
-version: 1.2
+version: 1.3
 authors: [BOBNOTBUILDING, SkylerTyler, xAstraah]
 
 commands:
