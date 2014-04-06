@@ -5,6 +5,6 @@ Only tested plugin are compiled into this plugin. Please create seperate Reposit
 
 Plugin Developers:
 
-- xAstraah
 - BOBNOTBUILDING
 - SkylerTyler
+- xAstraah
