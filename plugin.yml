@@ -1,0 +1,9 @@
+name: VividNetwork
+main: net.vividnetwork.VividNetwork
+version: 3.0
+authors: [BOBNOTBUILDING, SkylerTyler, xAstraah]
+
+permission:
+  hub.reload: op
+  hub.bypass: op
+  dropperevent.allowdrop: op
