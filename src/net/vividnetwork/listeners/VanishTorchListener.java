@@ -1,6 +1,7 @@
 package net.vividnetwork.listeners;
 
 import net.vividnetwork.Items;
+import net.vividnetwork.JoinItems;
 import net.vividnetwork.VividNetwork;
 
 import org.bukkit.ChatColor;
