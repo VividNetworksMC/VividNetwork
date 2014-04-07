@@ -1,23 +1,25 @@
 package net.vividnetwork.listeners;
 
 import net.vividnetwork.Items;
+import net.vividnetwork.JoinItems;
 import net.vividnetwork.VividNetwork;
 
-
-
-import org.bukkit.Material;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
+import org.bukkit.Color;
 import org.bukkit.Location;
+import org.bukkit.Material;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.PlayerInventory;
+import org.bukkit.inventory.meta.LeatherArmorMeta;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
+
 
 public class JoinLeaveListener implements Listener {
 	
@@ -27,44 +29,81 @@ public class JoinLeaveListener implements Listener {
 	public JoinLeaveListener(VividNetwork plugin) {
 		this.plugin = plugin;
 	}
-	
 
-	
-	
-	public ItemStack getCustName(Items item){
-		ItemStack is = null;
-		ItemMeta im;
-		switch(item){
-		case Compass:
-			is = new ItemStack(Material.COMPASS);
-			im = is.getItemMeta();
-			im.setDisplayName(ChatColor.GOLD.toString()+ ChatColor.BOLD + "Server Selector");
-			is.setItemMeta(im);
-			break;
-		case fishingrod:
-			is = new ItemStack(Material.FISHING_ROD);
-			im = is.getItemMeta();
-			im.setDisplayName(ChatColor.DARK_PURPLE.toString() + ChatColor.BOLD + "Grappling Hook");
-			is.setItemMeta(im);
-			break;
-		default:
-			break;
-		
-		}
-		return is;
-		
-	}
 	
 	@EventHandler
 	public void onPlayerJoin(PlayerJoinEvent event){
             Player player = event.getPlayer();
+        		if(player.hasPermission("armor.default")){
+        			PlayerInventory inv = player.getInventory();
+        			ItemStack is = new ItemStack(Material.LEATHER_BOOTS);
+        			is.addUnsafeEnchantment(Enchantment.PROTECTION_FALL, 50);
+        			LeatherArmorMeta im = (LeatherArmorMeta) is.getItemMeta();
+        			im.setColor(Color.GRAY);
+        			is.setItemMeta(im);
+        			inv.setBoots(is);
+        		}
+
+        		if(player.hasPermission("armor.builder")){
+        			PlayerInventory inv = player.getInventory();
+        			ItemStack is = new ItemStack(Material.LEATHER_BOOTS);
+        			is.addUnsafeEnchantment(Enchantment.PROTECTION_FALL, 50);
+        			LeatherArmorMeta im = (LeatherArmorMeta) is.getItemMeta();
+        			im.setColor(Color.MAROON);
+        			is.setItemMeta(im);
+        			inv.setBoots(is);
+        		}
+
+        		if(player.hasPermission("armor.webdev")){
+        			PlayerInventory inv = player.getInventory();
+        			ItemStack is = new ItemStack(Material.LEATHER_BOOTS);
+        			is.addUnsafeEnchantment(Enchantment.PROTECTION_FALL, 50);
+        			LeatherArmorMeta im = (LeatherArmorMeta) is.getItemMeta();
+        			im.setColor(Color.FUCHSIA);
+        			is.setItemMeta(im);
+        			inv.setBoots(is);
+        		}
+
+        		if(player.hasPermission("armor.dev")){
+        			PlayerInventory inv = player.getInventory();
+        			ItemStack is = new ItemStack(Material.LEATHER_BOOTS);
+        			is.addUnsafeEnchantment(Enchantment.PROTECTION_FALL, 50);
+        			LeatherArmorMeta im = (LeatherArmorMeta) is.getItemMeta();
+        			im.setColor(Color.TEAL);
+        			is.setItemMeta(im);
+        			inv.setBoots(is);
+        		}
+
+        		if(player.hasPermission("armor.owner")){
+        			PlayerInventory inv = player.getInventory();
+        			ItemStack is = new ItemStack(Material.LEATHER_BOOTS);
+        			is.addUnsafeEnchantment(Enchantment.PROTECTION_FALL, 50);
+        			LeatherArmorMeta im = (LeatherArmorMeta) is.getItemMeta();
+        			im.setColor(Color.MAROON);
+        			is.setItemMeta(im);
+        			inv.setBoots(is);
+
+        		}
+
+        		if(player.hasPermission("armor.founder")){
+        			PlayerInventory inv = player.getInventory();
+        			ItemStack is = new ItemStack(Material.LEATHER_BOOTS);
+        			is.addUnsafeEnchantment(Enchantment.PROTECTION_FALL, 50);
+        			LeatherArmorMeta im = (LeatherArmorMeta) is.getItemMeta();
+        			im.setColor(Color.PURPLE);
+        			is.setItemMeta(im);
+        			inv.setBoots(is);
+        		}
             player.addPotionEffect(new PotionEffect(PotionEffectType.SPEED, 360000, plugin.getConfig().getInt("SpeedStrength")));
             player.addPotionEffect(new PotionEffect(PotionEffectType.JUMP, 360000, plugin.getConfig().getInt("JumpStrength")));
             player.addPotionEffect(new PotionEffect(PotionEffectType.HEAL, 360000, plugin.getConfig().getInt("SpeedStrength")));
             player.addPotionEffect(new PotionEffect(PotionEffectType.HEALTH_BOOST, 360000, plugin.getConfig().getInt("SpeedStrength")));
-            player.getInventory().setItem(0, new ItemStack(getCustName(Items.Compass)));
-            player.getInventory().setItem(3, new ItemStack(getCustName(Items.fishingrod)));
+            PlayerInventory inv = player.getInventory();
+            inv.setItem(0, new ItemStack(JoinItems.getCustName(Items.Compass)));
+            inv.setItem(3, new ItemStack(JoinItems.getCustName(Items.fishingrod)));
+            inv.setItem(8, new ItemStack(JoinItems.getCustName(Items.magmacream)));
     }
+
 	
 	
 	@EventHandler
@@ -76,3 +115,4 @@ public class JoinLeaveListener implements Listener {
 		player.getInventory().clear();
 	}
 }
+
