@@ -1,8 +1,7 @@
 package net.vividnetwork.listeners;
 
+import net.vividnetwork.Items;
 import net.vividnetwork.VividNetwork;
-
-
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -12,24 +11,20 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.inventory.meta.ItemMeta;
-
- 
 
 public class VanishTorchListener implements Listener{
     
     
     public VividNetwork plugin;
-
+    
     public VanishTorchListener(VividNetwork plugin){ 
     	this.plugin = plugin;
      }
-		
-    public enum Items{
-    	magmacream,
-    	slimeball,
-    }
+   
     
     public ItemStack getCustName(Items item){
 		ItemStack is = null;
@@ -76,17 +71,27 @@ public class VanishTorchListener implements Listener{
                  player.sendMessage(ChatColor.GRAY + "Players Toggled: "+ChatColor.RED.toString()+ChatColor.BOLD+"Disabled");
     			 }
     		  }
-            if(action == Action.RIGHT_CLICK_AIR || action == Action.RIGHT_CLICK_BLOCK){
+    		}
+    	if(action == Action.RIGHT_CLICK_AIR || action == Action.RIGHT_CLICK_BLOCK){
     		 if(is.getType().equals(Material.SLIME_BALL) && is.hasItemMeta()){
-              	 for(Player others : this.plugin.getServer().getOnlinePlayers()){
-    	    	     player.showPlayer(others);
+    			 for(Player others : this.plugin.getServer().getOnlinePlayers()){
+    				 player.showPlayer(others);
                      player.playSound(player.getLocation(), Sound.ANVIL_BREAK, 10, 1);
                      player.setItemInHand(new ItemStack(getCustName(Items.magmacream)));
                      player.sendMessage(ChatColor.GRAY + "Players Toggled: "+ChatColor.GREEN.toString()+ChatColor.BOLD+"Enabled");
-    			 }
-    		  }
-              }
-    	    }
+    		   }
+    		 }
+    	   }
     	 }
      }
+     
+     
+     @EventHandler
+     public void onPlayerJoin(PlayerJoinEvent event){
+    	 Player player = event.getPlayer();
+    	 
+    	 PlayerInventory pi = player.getInventory();
+    	 pi.setItem(2, getCustName(Items.magmacream));
+     }
 }
+
