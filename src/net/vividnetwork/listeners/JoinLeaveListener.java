@@ -1,5 +1,6 @@
 package net.vividnetwork.listeners;
 
+import net.vividnetwork.Items;
 import net.vividnetwork.VividNetwork;
 
 
@@ -27,14 +28,7 @@ public class JoinLeaveListener implements Listener {
 		this.plugin = plugin;
 	}
 	
-	
-	
-        public enum Items{
-		Compass,
-		fishingrod,
-		magmacream,
-		slimball,
-	}
+
 	
 	
 	public ItemStack getCustName(Items item){
@@ -53,17 +47,6 @@ public class JoinLeaveListener implements Listener {
 			im.setDisplayName(ChatColor.DARK_PURPLE.toString() + ChatColor.BOLD + "Grappling Hook");
 			is.setItemMeta(im);
 			break;
-		case slimball:
-			is = new ItemStack(Material.SLIME_BALL);
-			im = is.getItemMeta();
-			im.setDisplayName(ChatColor.GREEN.toString() + ChatColor.BOLD + "Show Players");
-		    is.setItemMeta(im);
-			break;
-		case magmacream:
-			is = new ItemStack(Material.MAGMA_CREAM);
-			im = is.getItemMeta();
-			im.setDisplayName(ChatColor.RED.toString() + ChatColor.BOLD + "Hide Players");
-			is.setItemMeta(im);
 		default:
 			break;
 		
@@ -81,7 +64,6 @@ public class JoinLeaveListener implements Listener {
             player.addPotionEffect(new PotionEffect(PotionEffectType.HEALTH_BOOST, 360000, plugin.getConfig().getInt("SpeedStrength")));
             player.getInventory().setItem(0, new ItemStack(getCustName(Items.Compass)));
             player.getInventory().setItem(3, new ItemStack(getCustName(Items.fishingrod)));
-            player.getInventory().setItem(2, new ItemStack(getCustName(Items.magmacream)));
     }
 	
 	
