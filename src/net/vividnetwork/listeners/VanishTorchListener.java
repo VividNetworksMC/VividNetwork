@@ -1,34 +1,5 @@
-package net.vividnetwork.listeners;
 
-import net.vividnetwork.Items;
-import net.vividnetwork.JoinItems;
-import net.vividnetwork.VividNetwork;
-
-import org.bukkit.ChatColor;
-import org.bukkit.Material;
-import org.bukkit.Sound;
-import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.Listener;
-import org.bukkit.event.block.Action;
-import org.bukkit.event.player.PlayerInteractEvent;
-import org.bukkit.event.player.PlayerJoinEvent;
-import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.PlayerInventory;
-import org.bukkit.inventory.meta.ItemMeta;
-
-public class VanishTorchListener implements Listener{
-    
-    
-    public VividNetwork plugin;
-    
-    public VanishTorchListener(VividNetwork plugin){ 
-    	this.plugin = plugin;
-     }
-   
-    
-
-    package net.vividnetwork.listeners;
+ package net.vividnetwork.listeners;
 
 import net.vividnetwork.Items;
 import net.vividnetwork.JoinItems;
@@ -43,7 +14,7 @@ import org.bukkit.event.block.Action;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 
-public class VanishTorchListener implements Listener{
+ public class VanishTorchListener implements Listener{
     
     
     public VividNetwork plugin;
