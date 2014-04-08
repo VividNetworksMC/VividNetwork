@@ -18,3 +18,9 @@ bannedwords:
   - f.u.c.k
   - MothaFucka
   - bish
+# Anticaps: Turns CAPS in lowercase | AntiChar: Turns WTTTTTTTTFFFFFFFF in WTF | Spamstop: Let the user only type in chat every 3 seconds! | Maxlength: The maximal length of a message, -1 = no maxlenght | time: (Only if spamstop is on) The period (in seconds) in which users should be able to write in the chat. Default: every 3 seconds
+spamstop: true
+anticaps: true
+antichar: true
+maxlength: -1
+time: 3
