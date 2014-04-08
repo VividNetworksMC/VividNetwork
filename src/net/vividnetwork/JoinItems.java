@@ -27,7 +27,7 @@ public class JoinItems {
 		case Compass:
 			is = new ItemStack(Material.COMPASS);
 			im = is.getItemMeta();
-			im.setDisplayName(ChatColor.GOLD.toString()+ ChatColor.BOLD + "Server Selector");
+			im.setDisplayName(ChatColor.DARK_PURPLE.toString()+ ChatColor.BOLD + "EnderSelecter");
 			is.setItemMeta(im);
 			break;
 		case fishingrod:
