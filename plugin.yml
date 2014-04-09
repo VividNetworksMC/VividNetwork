@@ -1,15 +1,14 @@
 name: VividNetwork
 main: net.vividnetwork.VividNetwork
-version: 2.0
+version: 1.9
 authors: [BOBNOTBUILDING, SkylerTyler, xAstraah]
 
 commands:
   Warn:
-  StopEffect:
+    description: Warns a player of their action
+  stopeffect:
+    description: Stops the effects for a player! 
 
 permission:
-  vivid.vanishtorch.use:default
-  vivid.hub.bypass:op
-  vivid.chat.exempt:op
-  vivid.allowdrop:op
-  vivid.warnings.use: op
+  vivid.hub.reload: op
+  vivid.hub.bypass: op
