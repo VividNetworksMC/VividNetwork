@@ -6,9 +6,12 @@ authors: [BOBNOTBUILDING, SkylerTyler, xAstraah]
 commands:
   Warn:
     description: Warns a player of their action
+  AdminChat:
+    description: Talk to admins, Can also be toggled!
   stopeffect:
     description: Stops the effects for a player! 
 
 permission:
   vivid.hub.reload: op
   vivid.hub.bypass: op
+  AdminChat.use: op
