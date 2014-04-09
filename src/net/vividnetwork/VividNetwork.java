@@ -26,7 +26,7 @@ public class VividNetwork extends JavaPlugin{
 			getServer().getPluginManager().registerEvents(new Grappler(this), this);
 			getServer().getPluginManager().registerEvents(new AntiSwearListener(this), this);
 			getCommand("Warn").setExecutor(new WarnCommand(this));
-			getCommand("StopEffect").setExecutor(new WarnCommand(this));
+			getCommand("StopEffect").setExecutor(new StopEffectCommand(this));
 			PluginDescriptionFile pdfFile = this.getDescription();
 			System.out.println("[VividNetwork] " + pdfFile.getVersion() + " is Enabled!");
 			List<String> authors = pdfFile.getAuthors();
