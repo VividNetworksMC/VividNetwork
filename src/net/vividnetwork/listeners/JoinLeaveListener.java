@@ -34,7 +34,7 @@ public class JoinLeaveListener implements Listener {
 	@EventHandler
 	public void onPlayerJoin(PlayerJoinEvent event){
             Player player = event.getPlayer();
-        		if(player.hasPermission("armor.default")){
+        		if(player.hasPermission("vivid.armor.default")){
         			PlayerInventory inv = player.getInventory();
         			ItemStack is = new ItemStack(Material.LEATHER_BOOTS);
         			is.addUnsafeEnchantment(Enchantment.PROTECTION_FALL, 50);
@@ -44,7 +44,7 @@ public class JoinLeaveListener implements Listener {
         			inv.setBoots(is);
         		}
 
-        		if(player.hasPermission("armor.builder")){
+        		if(player.hasPermission("vivid.armor.builder")){
         			PlayerInventory inv = player.getInventory();
         			ItemStack is = new ItemStack(Material.LEATHER_BOOTS);
         			is.addUnsafeEnchantment(Enchantment.PROTECTION_FALL, 50);
@@ -54,7 +54,7 @@ public class JoinLeaveListener implements Listener {
         			inv.setBoots(is);
         		}
 
-        		if(player.hasPermission("armor.webdev")){
+        		if(player.hasPermission("vivid.armor.webdev")){
         			PlayerInventory inv = player.getInventory();
         			ItemStack is = new ItemStack(Material.LEATHER_BOOTS);
         			is.addUnsafeEnchantment(Enchantment.PROTECTION_FALL, 50);
@@ -64,7 +64,7 @@ public class JoinLeaveListener implements Listener {
         			inv.setBoots(is);
         		}
 
-        		if(player.hasPermission("armor.dev")){
+        		if(player.hasPermission("vivid.armor.dev")){
         			PlayerInventory inv = player.getInventory();
         			ItemStack is = new ItemStack(Material.LEATHER_BOOTS);
         			is.addUnsafeEnchantment(Enchantment.PROTECTION_FALL, 50);
@@ -74,7 +74,7 @@ public class JoinLeaveListener implements Listener {
         			inv.setBoots(is);
         		}
 
-        		if(player.hasPermission("armor.owner")){
+        		if(player.hasPermission("vivid.armor.owner")){
         			PlayerInventory inv = player.getInventory();
         			ItemStack is = new ItemStack(Material.LEATHER_BOOTS);
         			is.addUnsafeEnchantment(Enchantment.PROTECTION_FALL, 50);
@@ -85,7 +85,7 @@ public class JoinLeaveListener implements Listener {
 
         		}
 
-        		if(player.hasPermission("armor.founder")){
+        		if(player.hasPermission("vivid.armor.founder")){
         			PlayerInventory inv = player.getInventory();
         			ItemStack is = new ItemStack(Material.LEATHER_BOOTS);
         			is.addUnsafeEnchantment(Enchantment.PROTECTION_FALL, 50);
@@ -104,12 +104,12 @@ public class JoinLeaveListener implements Listener {
             inv.setItem(8, new ItemStack(JoinItems.getCustName(Items.magmacream)));
     }
 
-	
+
 	
 	@EventHandler
 	public void onPlayerQuit(PlayerQuitEvent event){
 			Player player = event.getPlayer();
-			if(!player.hasPermission("hub.bypass")) {
+			if(!player.hasPermission("vivid.hub.bypass")) {
             player.teleport(new Location(Bukkit.getWorld("world"), plugin.getConfig().getInt("X"), plugin.getConfig().getInt("Y"), plugin.getConfig().getInt("Z")));
 		}
 		player.getInventory().clear();

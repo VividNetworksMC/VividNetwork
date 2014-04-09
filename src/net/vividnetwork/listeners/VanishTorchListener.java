@@ -31,7 +31,7 @@ import org.bukkit.inventory.ItemStack;
     	 ItemStack itemstack = player.getItemInHand();
     	 Action action = event.getAction();
     	 
-    	 if(!(player.hasPermission("vanishtorch.use")))
+    	 if(!(player.hasPermission("vivid.vanishtorch.use")))
     		 return;
     	 
     	 if(itemstack == null || itemstack.getType().equals(Material.AIR))

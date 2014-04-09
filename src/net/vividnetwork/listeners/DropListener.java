@@ -16,6 +16,6 @@ public class DropListener implements Listener {
 	
 	@EventHandler
 	public void onPlayerDropItem(PlayerDropItemEvent event) {
-		if(!event.getPlayer().hasPermission("dropprevent.allowdrop")) {event.setCancelled(true);}
+		if(!event.getPlayer().hasPermission("vivid.allowdrop")) {event.setCancelled(true);}
 	}
 }

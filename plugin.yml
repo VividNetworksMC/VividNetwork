@@ -1,12 +1,15 @@
 name: VividNetwork
 main: net.vividnetwork.VividNetwork
-version: 1.9
+version: 2.0
 authors: [BOBNOTBUILDING, SkylerTyler, xAstraah]
 
 commands:
   Warn:
+  StopEffect:
 
 permission:
-  hub.reload: op
-  hub.bypass: op
-  dropperevent.allowdrop: op
+  vivid.vanishtorch.use:default
+  vivid.hub.bypass:op
+  vivid.chat.exempt:op
+  vivid.allowdrop:op
+  vivid.warnings.use: op

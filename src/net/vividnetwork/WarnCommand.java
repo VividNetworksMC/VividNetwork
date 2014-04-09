@@ -23,7 +23,7 @@ public class WarnCommand implements CommandExecutor
     	
             if (cmd.getName().equalsIgnoreCase("warn"))
             {
-                    if(sender.hasPermission("Warnings.use") || sender.isOp() )
+                    if(sender.hasPermission("vivid.warnings.use") || sender.isOp() )
                     {
                         if (args.length < 2)
                         {

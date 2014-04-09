@@ -40,7 +40,7 @@ public class AntiSwearListener implements Listener {
 			maxlength = plugin.getConfig().getInt("maxlength");
 			time = plugin.getConfig().getInt("time");
 			final Player p = e.getPlayer();
-			if(p.hasPermission("se.exempt")){
+			if(p.hasPermission("vivid.chat.exempt")){
 				return;
 			}
 				if(maxlength > -1){
