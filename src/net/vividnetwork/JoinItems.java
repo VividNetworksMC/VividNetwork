@@ -16,7 +16,7 @@ public class JoinItems {
 			is = new ItemStack(Material.SLIME_BALL);
 			im = is.getItemMeta();
 			im.setDisplayName(ChatColor.GREEN.toString() + ChatColor.BOLD + "Show Players");
-		    is.setItemMeta(im);
+		        is.setItemMeta(im);
 			break;
 		case magmacream:
 			is = new ItemStack(Material.MAGMA_CREAM);
@@ -27,7 +27,7 @@ public class JoinItems {
 		case Compass:
 			is = new ItemStack(Material.COMPASS);
 			im = is.getItemMeta();
-			im.setDisplayName(ChatColor.DARK_PURPLE.toString()+ ChatColor.BOLD + "EnderSelecter");
+			im.setDisplayName(ChatColor.DARK_PURPLE.toString()+ ChatColor.BOLD + "Ender Selecter");
 			is.setItemMeta(im);
 			break;
 		case fishingrod:
