@@ -10,7 +10,7 @@ import org.bukkit.event.player.PlayerMoveEvent;
 import org.bukkit.event.player.PlayerToggleFlightEvent;
 
 public class DoubleJumpListener implements Listener {
-	
+
 	public VividNetwork plugin;
 
 	public DoubleJumpListener(VividNetwork plugin) {

@@ -13,7 +13,7 @@ import org.bukkit.event.player.PlayerQuitEvent;
 
 public class AdminChatListeners implements Listener
 {
-	
+
 	public static boolean canUseAdminChat(CommandSender sender)
 	{
 		if(sender.hasPermission("AdminChat.use") || sender.isOp())
@@ -22,7 +22,7 @@ public class AdminChatListeners implements Listener
 		}
 		return sender.isOp();
 	}
-	
+
 	public static void sendToChat(String msg, CommandSender sender)
 	{
 		String pname = sender.getName();
@@ -38,7 +38,7 @@ public class AdminChatListeners implements Listener
 			}
 		}
 	}
-	
+
 	@EventHandler
 	public void onPlayerChat(AsyncPlayerChatEvent event)
 	{
@@ -56,7 +56,7 @@ public class AdminChatListeners implements Listener
 		{
 			AdminChat.chatters.remove(pname);
 		}
-		
+
 	}
-	
+
 }

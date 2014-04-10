@@ -15,13 +15,13 @@ import net.vividnetwork.VividNetwork;
 
 public class NoEnviromentChange implements Listener {
 
-    public VividNetwork plugin;
+	public VividNetwork plugin;
 
-    public NoEnviromentChange(VividNetwork plugin){ 
-    	this.plugin = plugin;
-     }
-    
-    public void onEnable()
+	public NoEnviromentChange(VividNetwork plugin){ 
+		this.plugin = plugin;
+	}
+
+	public void onEnable()
 	{		
 		BukkitScheduler scheduler = Bukkit.getServer().getScheduler();
 		scheduler.scheduleSyncRepeatingTask(plugin, new Runnable()
@@ -43,8 +43,8 @@ public class NoEnviromentChange implements Listener {
 		}
 		, 0, 100L);
 	}
-    
-    public boolean onCommand(CommandSender sender, Command command, String commandLabel, String[] args)
+
+	public boolean onCommand(CommandSender sender, Command command, String commandLabel, String[] args)
 	{
 		Player player = (Player) sender;
 

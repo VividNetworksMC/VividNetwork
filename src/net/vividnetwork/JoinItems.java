@@ -6,8 +6,8 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 public class JoinItems {
-	
-	
+
+
 	public static ItemStack getCustName(Items item){
 		ItemStack is = null;
 		ItemMeta im;
@@ -16,7 +16,7 @@ public class JoinItems {
 			is = new ItemStack(Material.SLIME_BALL);
 			im = is.getItemMeta();
 			im.setDisplayName(ChatColor.GREEN.toString() + ChatColor.BOLD + "Show Players");
-		        is.setItemMeta(im);
+			is.setItemMeta(im);
 			break;
 		case magmacream:
 			is = new ItemStack(Material.MAGMA_CREAM);
@@ -36,9 +36,15 @@ public class JoinItems {
 			im.setDisplayName(ChatColor.DARK_PURPLE.toString() + ChatColor.BOLD + "Grappling Hook");
 			is.setItemMeta(im);
 			break;
+		case blazerod:
+			is = new ItemStack(Material.BLAZE_ROD);
+			im = is.getItemMeta();
+			im.setDisplayName(ChatColor.DARK_AQUA.toString() + ChatColor.BOLD + "Magic Broom");
+			is.setItemMeta(im);
+			break;
 		default:
 			break;
-		 }
+		}
 		return is;
 	}
 

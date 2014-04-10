@@ -7,13 +7,13 @@ import org.bukkit.event.player.PlayerDropItemEvent;
 import net.vividnetwork.VividNetwork;
 
 public class DropListener implements Listener {
-	
+
 	public VividNetwork plugin;
 
 	public DropListener(VividNetwork plugin){
 		this.plugin = plugin;
 	}
-	
+
 	@EventHandler
 	public void onPlayerDropItem(PlayerDropItemEvent event) {
 		if(!event.getPlayer().hasPermission("vivid.allowdrop")) {event.setCancelled(true);}
