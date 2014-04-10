@@ -102,6 +102,7 @@ public class JoinLeaveListener implements Listener {
 		inv.setItem(0, new ItemStack(JoinItems.getCustName(Items.Compass)));
 		inv.setItem(3, new ItemStack(JoinItems.getCustName(Items.fishingrod)));
 		inv.setItem(8, new ItemStack(JoinItems.getCustName(Items.magmacream)));
+		inv.setItem(6, new ItemStack(JoinItems.getCustName(Items.blazerod)));
 	}
 
 
