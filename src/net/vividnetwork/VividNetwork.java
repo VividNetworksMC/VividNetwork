@@ -11,6 +11,7 @@ import net.vividnetwork.listeners.JumpListener;
 import net.vividnetwork.listeners.VanishTorchListener;
 import net.vividnetwork.listeners.InventoryListener;
 import net.vividnetwork.listeners.Grappler;
+import net.vividnetwork.listeners.WorldListener;
 
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -29,6 +30,7 @@ public class VividNetwork extends JavaPlugin{
 		getServer().getPluginManager().registerEvents(new AntiSwearListener(this), this);
 		getServer().getPluginManager().registerEvents(new AdminChatListeners(), this);
 		getServer().getPluginManager().registerEvents(new JumpListener(this), this);
+		getServer().getPluginManager().registerEvents(new WorldListener(this), this);
 		getCommand("AdminChat").setExecutor(new AdminChat());
 		getCommand("Warn").setExecutor(new WarnCommand(this));
 		getCommand("StopEffect").setExecutor(new StopEffectCommand(this));
