@@ -2,6 +2,8 @@ package net.vividnetwork.listeners;
 
 import net.vividnetwork.VividNetwork;
 
+import org.bukkit.Bukkit;
+import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -19,7 +21,7 @@ public class WorldListener implements Listener {
 	public void onPlayerMove(PlayerMoveEvent event){
 		Player player = event.getPlayer();
 		if(event.getTo().getY() < 0){
-			player.teleport(event.getFrom().getWorld().getSpawnLocation());
+			player.teleport(new Location(Bukkit.getWorld("world"), plugin.getConfig().getInt("X"), plugin.getConfig().getInt("Y"), plugin.getConfig().getInt("Z")));
 		}
 	}
 }

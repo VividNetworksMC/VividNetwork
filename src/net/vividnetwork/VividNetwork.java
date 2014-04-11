@@ -8,6 +8,7 @@ import net.vividnetwork.listeners.DoubleJumpListener;
 import net.vividnetwork.listeners.DropListener;
 import net.vividnetwork.listeners.JoinLeaveListener;
 import net.vividnetwork.listeners.JumpListener;
+import net.vividnetwork.listeners.ParticleListener;
 import net.vividnetwork.listeners.VanishTorchListener;
 import net.vividnetwork.listeners.InventoryListener;
 import net.vividnetwork.listeners.Grappler;
