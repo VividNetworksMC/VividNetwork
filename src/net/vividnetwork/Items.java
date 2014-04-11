@@ -5,5 +5,5 @@ public enum Items {
 	slimeball,
 	Compass,
 	fishingrod,
-    blazerod
+        wheat,
 }
