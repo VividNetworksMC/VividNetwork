@@ -21,7 +21,7 @@ public class JumpListener implements Listener {
     public void onPlayerInteractEvent(PlayerInteractEvent e) {
         if (e.getAction() == Action.LEFT_CLICK_BLOCK) { return; }
         if (e.getAction() == Action.LEFT_CLICK_AIR) { return; }
-        if (!(e.getItem().getType() == Material.BLAZE_ROD)) { return; }
+        if (!(e.getItem().getType() == Material.WHEAT)) { return; }
         Player p = e.getPlayer();
  
         p.setVelocity(p.getLocation().getDirection().normalize().multiply(5));
