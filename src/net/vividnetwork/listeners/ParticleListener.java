@@ -56,7 +56,7 @@ public class ParticleListener implements Listener {
 		if(!(player.hasPermission("particle.owner")))
 			return;
 		
-		if(player.hasPermission("particle.owner") || player.hasPermission("particle.webdev") 
+		if(player.hasPermission("particle.owner") 
 				&& player.getGameMode() == GameMode.SURVIVAL){
 			if(player.isSneaking() || player.isSprinting()){
 				Location loc = player.getLocation();
