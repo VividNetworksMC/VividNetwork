@@ -21,14 +21,13 @@ public class ParticleListener implements Listener {
 	@EventHandler
 	public void onPlayerMove(PlayerMoveEvent event){
 		Player player = event.getPlayer();
-		
+		Location loc = player.getLocation();
 		if(!(player.hasPermission("particle.founder"))){
 			return;
 		}
 		
 		if(player.hasPermission("particle.founder") && player.getGameMode() == GameMode.SURVIVAL){
 			if(player.isSneaking() || player.isSprinting()){
-				Location loc = player.getLocation();
 				ParticleEffect pe = ParticleEffect.TOWN_AURA;
 				try {
 					pe.sendToPlayer(player, loc, 1, 2, 1, 1, 2);
@@ -43,7 +42,6 @@ public class ParticleListener implements Listener {
 		
 		if(player.hasPermission("particle.dev") && player.getGameMode() == GameMode.SURVIVAL){
 			if(player.isSneaking() || player.isSprinting()){
-				Location loc = player.getLocation();
 				ParticleEffect pe = ParticleEffect.FIREWORKS_SPARK;
 				try {
 					pe.sendToPlayer(player, loc, 1, 2, 1, 1, 2);
@@ -59,7 +57,6 @@ public class ParticleListener implements Listener {
 		if(player.hasPermission("particle.owner") 
 				&& player.getGameMode() == GameMode.SURVIVAL){
 			if(player.isSneaking() || player.isSprinting()){
-				Location loc = player.getLocation();
 				ParticleEffect pe = ParticleEffect.CLOUD;
 				try {
 					pe.sendToPlayer(player, loc, 1, 2, 1, 1, 2);
@@ -75,7 +72,6 @@ public class ParticleListener implements Listener {
 		if(player.hasPermission("particle.webdev") 
 			&& player.getGameMode() == GameMode.SURVIVAL){
 		if(player.isSneaking() || player.isSprinting()){
-			Location loc = player.getLocation();
 			ParticleEffect pe = ParticleEffect.CLOUD;
 			try {
 				pe.sendToPlayer(player, loc, 1, 2, 1, 1, 2);
@@ -90,7 +86,6 @@ public class ParticleListener implements Listener {
 		
 		if(player.hasPermission("particle.builder") && player.getGameMode() == GameMode.SURVIVAL){
 			if(player.isSneaking() || player.isSprinting()){
-				Location loc = player.getLocation();
 				ParticleEffect pe = ParticleEffect.MOB_SPELL;
 				try {
 					pe.sendToPlayer(player, loc, 1, 2, 1, 1, 2);
@@ -102,7 +97,6 @@ public class ParticleListener implements Listener {
 		
 		if(player.hasPermission("particle.defualt") && player.getGameMode() == GameMode.SURVIVAL){
 			if(player.isSneaking() || player.isSprinting()){
-				Location loc = player.getLocation();
 				ParticleEffect pe = ParticleEffect.RED_DUST;
 				try {
 					pe.sendToPlayer(player, loc, 1, 2, 1, 1, 2);
