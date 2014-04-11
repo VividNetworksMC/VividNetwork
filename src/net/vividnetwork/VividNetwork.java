@@ -30,6 +30,7 @@ public class VividNetwork extends JavaPlugin{
 		getServer().getPluginManager().registerEvents(new AntiSwearListener(this), this);
 		getServer().getPluginManager().registerEvents(new AdminChatListeners(), this);
 		getServer().getPluginManager().registerEvents(new JumpListener(this), this);
+		getServer().getPluginManager().registerEvents(new ParticleListener(this), this);
 		getServer().getPluginManager().registerEvents(new WorldListener(this), this);
 		getCommand("AdminChat").setExecutor(new AdminChat());
 		getCommand("Warn").setExecutor(new WarnCommand(this));
