@@ -36,8 +36,8 @@ public class JoinItems {
 			im.setDisplayName(ChatColor.DARK_PURPLE.toString() + ChatColor.BOLD + "Grappling Hook");
 			is.setItemMeta(im);
 			break;
-		case blazerod:
-			is = new ItemStack(Material.BLAZE_ROD);
+         	case wheat:
+			is = new ItemStack(Material.WHEAT);
 			im = is.getItemMeta();
 			im.setDisplayName(ChatColor.DARK_AQUA.toString() + ChatColor.BOLD + "Magic Broom");
 			is.setItemMeta(im);
