@@ -1,4 +1,3 @@
-
 package net.vividnetwork.listeners;
 
 import net.vividnetwork.Items;
@@ -26,40 +25,41 @@ public class VanishTorchListener implements Listener{
 
 
 
-	@EventHandler
-	public void onPlayerInteract(PlayerInteractEvent event){
-		Player player = event.getPlayer();
-		ItemStack itemstack = player.getItemInHand();
-		Action action = event.getAction();
-
-		if(!(player.hasPermission("vivid.vanishtorch.use")))
-			return;
-
-		if(itemstack == null || itemstack.getType().equals(Material.AIR))
-			return;;
-
-			if(player.hasPermission("vanishtorch.use")){
-				if(action == Action.RIGHT_CLICK_AIR || action == Action.RIGHT_CLICK_BLOCK){
-					if(itemstack.getType().equals(Material.MAGMA_CREAM) && itemstack.hasItemMeta()){
-						player.sendMessage(ChatColor.RED.toString() + ChatColor.BOLD + "HIDING PLAYERS");
-						for(Player others : this.plugin.getServer().getOnlinePlayers()){
-							player.hidePlayer(others);
-							player.playSound(player.getLocation(), Sound.ANVIL_LAND, 10, 1);
-							player.setItemInHand(new ItemStack(JoinItems.getCustName(Items.slimeball)));
-						}
-					}
-				}
-				if(action == Action.RIGHT_CLICK_AIR || action == Action.RIGHT_CLICK_BLOCK){
-					if(itemstack.getType().equals(Material.SLIME_BALL) && itemstack.hasItemMeta()){
-						player.sendMessage(ChatColor.GREEN.toString() + ChatColor.BOLD + "SHOWING PLAYERS");
-						for(Player others : this.plugin.getServer().getOnlinePlayers()){
-							player.showPlayer(others);
-							player.playSound(player.getLocation(), Sound.ANVIL_BREAK, 10, 1);
-							player.setItemInHand(new ItemStack(JoinItems.getCustName(Items.magmacream)));;
-						}
-					}
-				}
-			}
-	}
+  @EventHandler
+    public void onPlayerInteract(PlayerInteractEvent event){
+    	 Player player = event.getPlayer();
+    	 ItemStack itemstack = player.getItemInHand();
+    	 Action action = event.getAction();
+    	 
+    	 if(!(player.hasPermission("vanishtorch.use")))
+    		 return;
+    	 
+    	 if(itemstack == null || itemstack.getType().equals(Material.AIR) ||! itemstack.hasItemMeta())
+    	 return;
+    	 
+    	 if(player.hasPermission("vanishtorch.use")){
+    		if(action == Action.RIGHT_CLICK_AIR || action == Action.RIGHT_CLICK_BLOCK){
+    		 if(itemstack.getType().equals(Material.MAGMA_CREAM) && itemstack.hasItemMeta()){
+    			 for(Player others : plugin.getServer().getOnlinePlayers()){
+    			 player.hidePlayer(others);
+                 player.playSound(player.getLocation(), Sound.ANVIL_LAND, 10, 1);
+                 player.setItemInHand(new ItemStack(JoinItems.getCustName(Items.slimeball)));
+    			 }
+    			player.sendMessage(ChatColor.GRAY + "Players Toggled: " + ChatColor.RED.toString() + ChatColor.BOLD + "Disabled");
+    		  }    	
+    		}
+    		if(itemstack == null || itemstack.getType().equals(Material.AIR) ||! itemstack.hasItemMeta())
+    	    	 return;
+    		
+    		 if(itemstack.getType().equals(Material.SLIME_BALL) && itemstack.hasItemMeta()){
+    			for(Player others : plugin.getServer().getOnlinePlayers()){
+    			 player.showPlayer(others);
+    			 player.playSound(player.getLocation(), Sound.ANVIL_BREAK, 10, 1);
+                 player.setItemInHand(new ItemStack(JoinItems.getCustName(Items.magmacream)));
+    		}
+    		 player.sendMessage(ChatColor.GRAY + "Players Toggled: " + ChatColor.GREEN.toString() + ChatColor.BOLD + "Enabled");
+    	   }
+    	 }
+    }
 }
 
