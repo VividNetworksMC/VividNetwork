@@ -18,6 +18,81 @@ bannedwords:
   - f.u.c.k
   - MothaFucka
   - bish
+  - anal
+  - anus
+  - arse
+  - ass
+  - ballsack
+  - balls
+  - bastard
+  - bitch
+  - biatch
+  - bloody
+  - blowjob
+  - blow job
+  - bollock
+  - bollok
+  - boob
+  - bugger
+  - bum
+  - butt
+  - buttplug
+  - clitoris
+  - cock
+  - coon
+  - crap
+  - cunt
+  - damn
+  - dick
+  - dildo
+  - dyke
+  - fag
+  - feck
+  - fellate
+  - fellatio
+  - felching
+  - fuck
+  - f u c k
+  - fudgepacker
+  - fudge packer
+  - flange
+  - Goddamn
+  - God damn
+  - hell
+  - homo
+  - jerk
+  - jizz
+  - knobend
+  - knob end
+  - labia
+  - lmao
+  - lmfao
+  - muff
+  - nigger
+  - nigga
+  - penis
+  - piss
+  - poop
+  - prick
+  - pube
+  - pussy
+  - queer
+  - scrotum
+  - sex
+  - shit
+  - s hit
+  - sh1t
+  - slut
+  - smegma
+  - spunk
+  - tit
+  - tosser
+  - turd
+  - twat
+  - vagina
+  - wank
+  - whore
+  - wtf
 # Anticaps: Turns CAPS in lowercase | AntiChar: Turns WTTTTTTTTFFFFFFFF in WTF | Spamstop: Let the user only type in chat every 3 seconds! | Maxlength: The maximal length of a message, -1 = no maxlenght | time: (Only if spamstop is on) The period (in seconds) in which users should be able to write in the chat. Default: every 3 seconds
 spamstop: true
 anticaps: true

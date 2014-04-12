@@ -34,7 +34,6 @@ public class VividNetwork extends JavaPlugin{
 		getServer().getPluginManager().registerEvents(new ParticleListener(this), this);
 		getServer().getPluginManager().registerEvents(new WorldListener(this), this);
 		getCommand("AdminChat").setExecutor(new AdminChat());
-		getCommand("Warn").setExecutor(new WarnCommand(this));
 		getCommand("StopEffect").setExecutor(new StopEffectCommand(this));
 		PluginDescriptionFile pdfFile = this.getDescription();
 		System.out.println("[VividNetwork] " + pdfFile.getVersion() + " is Enabled!");

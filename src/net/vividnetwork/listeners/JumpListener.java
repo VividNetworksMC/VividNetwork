@@ -24,7 +24,7 @@ public class JumpListener implements Listener {
         if (!(e.getItem().getType() == Material.WHEAT)) { return; }
         Player p = e.getPlayer();
  
-        p.setVelocity(p.getLocation().getDirection().normalize().multiply(5));
+        p.setVelocity(p.getLocation().getDirection().normalize().multiply(3));
         p.playSound(p.getLocation(), Sound.ENDERDRAGON_WINGS, 10, 1);
         return;
     }
