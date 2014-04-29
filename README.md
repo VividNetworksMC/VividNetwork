@@ -7,4 +7,4 @@ Plugin Developers:
 
 - BOBNOTBUILDING
 - SkylerTyler
-- xAstraah
+- xAstraah (Resigned from VividNetworks)
