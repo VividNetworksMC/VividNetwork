@@ -62,7 +62,7 @@ public class AdminChat implements CommandExecutor
 				}
 				else
 				{
-					sender.sendMessage(ChatColor.RED + "[AdminChat] /AdminChat <Your MSG>");
+					sender.sendMessage(ChatColor.RED + "[AdminChat] /AdminChat <MessageHere>");
 				}
 			}
 			else
